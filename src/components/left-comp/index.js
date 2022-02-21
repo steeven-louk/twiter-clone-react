@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './styles/styles.scss'
+import { Link } from 'react-router-dom'
 
 function LeftComp() {
   return (
@@ -16,7 +17,7 @@ function LeftComp() {
             <span className="nav-link text-white text-capitalize"><FontAwesomeIcon className='icon' icon="fa-solid fa-envelope" />messages</span>
             <span className="nav-link text-white text-capitalize"><FontAwesomeIcon className='icon' icon="fa-solid fa-bookmark" />bookmarks</span>
             <span className="nav-link text-white text-capitalize"><FontAwesomeIcon className='icon' icon="fa-solid fa-list" />lists</span>
-            <span className="nav-link text-white text-capitalize"><FontAwesomeIcon className='icon' icon="fa-solid fa-user" />profile</span>
+            <Link to='/profil' className="nav-link text-white text-capitalize"><FontAwesomeIcon className='icon' icon="fa-solid fa-user" />profile</Link>
             <span className="nav-link text-white text-capitalize"><FontAwesomeIcon className='icon' icon="fa-solid fa-ellipsis"/>more</span>
             <a href="/" className="btn btn-primary text-white text-capitalize text-center btn-tweet">tweet</a>
           </nav>
