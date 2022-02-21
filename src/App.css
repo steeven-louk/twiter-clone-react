@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .4s all ease;
+}
+
+.App{
+    display: grid;
+    grid-template-columns: 1.1fr 2.4fr 1.3fr;
+}
