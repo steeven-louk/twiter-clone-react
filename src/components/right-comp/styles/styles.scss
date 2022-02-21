@@ -1,4 +1,11 @@
 .right-section{
     background-color: black;
     min-height: 100vh;
+    padding: 0 25px;
+
+    .right-container{
+        padding: 25px;
+        background: #171717;
+        border-radius: 15px;
+    }
 }
