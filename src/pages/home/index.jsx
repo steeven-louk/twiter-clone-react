@@ -26,6 +26,8 @@ const getData = async () =>{
   }
 }
 
+
+  
   useEffect(() => {
     
     getData();

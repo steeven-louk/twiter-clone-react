@@ -1,0 +1,68 @@
+.modal-section{
+    width: 100%;
+   
+    //background: #000!important;
+
+    .img-profil{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+    }
+
+    form textarea{
+        background: transparent;
+        border: 0;
+        resize: none!important;
+        color: #fff;
+        font-size: 25px;
+        outline: none!important;
+
+        &::placeholder{
+            font-weight: bold;
+        }
+        &:focus{
+            outline: none!important;
+        }
+    }
+
+    form {
+
+        .footer .action-icon .icon{
+            height: 20px;
+            cursor: pointer;
+            padding: 10px;
+
+            &:hover{
+                background: aquamarine;
+                border-radius: 50%;
+            }
+            
+        }
+
+        .btn{
+           // padding:5px;
+            border-radius: 25px;
+            width: 8em;
+            font-weight: bold;
+        }
+    }
+}
+
+.modal-content{
+   // background: #000;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+
+    .action-icon .icon{
+        margin-left: 25px;
+    }
+}

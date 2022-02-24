@@ -1,9 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useState } from 'react'
 import './styles/styles.scss'
 import { Link } from 'react-router-dom'
+import ModalsComp from '../modal-comp/ModalsComp';
 
 function LeftComp() {
+
+  const [modal, setModal] = useState(false);
+
+  const modalpop = () =>{
+    try {
+      setModal(true)
+    } catch (err) {
+      console.warn('mess :', err)
+    }
+  }
+
+
   return (
     <section className="left-section">
         <div className="container">
@@ -19,7 +32,7 @@ function LeftComp() {
             <span className="nav-link text-white text-capitalize"><FontAwesomeIcon className='icon' icon="fa-solid fa-list" />lists</span>
             <Link to='/profil' className="nav-link text-white text-capitalize"><FontAwesomeIcon className='icon' icon="fa-solid fa-user" />profile</Link>
             <span className="nav-link text-white text-capitalize"><FontAwesomeIcon className='icon' icon="fa-solid fa-ellipsis"/>more</span>
-            <a href="/" className="btn btn-primary text-white text-capitalize text-center btn-tweet">tweet</a>
+            <button onClick={()=> modalpop() } data-bs-toggle="modal" data-bs-target="#exampleModal" type='button' className="btn btn-primary text-white text-capitalize text-center btn-tweet">tweet</button>
           </nav>
           <div className="footer">
             <a href="/" className="btn d-flex">
@@ -35,6 +48,8 @@ function LeftComp() {
             </a>
           </div>
         </div>
+
+        {modal? <ModalsComp /> : ''}
     </section>
     
   )
