@@ -1,0 +1,92 @@
+.feed-section .feed-container{
+
+    display: flex;
+
+    .img-profil {
+
+        width: 9em;
+        border-radius: 100%;
+        padding-right: 15px;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+    }
+
+    
+
+}
+
+.tweet-content {
+
+    .header{
+        h5,.date {
+            padding-top: 5px;
+            margin-left: 5px;
+        }
+    }
+
+    .body{
+        color: #fff;
+
+        img{
+           max-width: 450px;
+            border-radius: 10px;
+        }
+    }
+
+    .footer{
+        width: 350px;
+        align-items: center;
+        padding-top: 15px;
+    
+    }
+
+    .ico-1, .ico-4{
+        display: flex;
+        align-items: center;
+          
+        &:hover{
+            color: aqua;
+        }
+       
+        .count{
+            margin-left: 10px;
+          
+        }
+    }
+
+    .ico-2{
+        display: flex;
+        align-items: center;
+          
+        &:hover{
+            color: greenyellow;
+        }
+       
+        .count{
+            margin-left: 10px;
+          
+        }
+    }
+
+    .ico-3{
+        display: flex;
+        align-items: center;
+          
+        &:hover{
+            color: #ff0000;
+        }
+       
+        .count{
+            margin-left: 10px;
+          
+        }
+    }
+
+    .ico{
+        cursor: pointer;
+    }
+}
