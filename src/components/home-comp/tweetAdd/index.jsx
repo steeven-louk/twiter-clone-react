@@ -1,9 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
 import './styles/styles.scss'
 
 
-function TweetAdd() {
+function TweetAdd({data}) {
+
+    const [tweet, setTweet] = useState('');
+    
+    const url = "https://retoolapi.dev/2AteKd/data_feed"
+    console.log('====================================');
+    console.log(tweet);
+    console.log('====================================');
+
+
   return (
     <section className="tweet-section d-flex">
         <div className="img-profil">
@@ -11,7 +21,7 @@ function TweetAdd() {
         </div>
         <div className="add-tweet">
             <form action="" className='form-group'>
-                <textarea name="tweet" className='form-control' col='30' placeholder="What's happening ?" ></textarea>
+                <textarea name="tweet" value={tweet} onChange={(e)=> setTweet(e.target.value)} className='form-control' col='30' placeholder="What's happening ?" ></textarea>
                 <hr />
                 <div className="footer d-flex justify-content-between">
                     <div className="action-icon">

@@ -9,8 +9,8 @@ import './styles/styles.scss'
 function Home() {
 
   const url = 'https://retoolapi.dev/2AteKd/data_feed';
-const [data, setData] = useState([]);
-const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
 const getData = async () =>{
   try {
@@ -27,7 +27,6 @@ const getData = async () =>{
 }
 
 
-  
   useEffect(() => {
     
     getData();
@@ -37,7 +36,7 @@ const getData = async () =>{
   return (
     <section className="home-section"> 
       <div className="container">
-          <TweetAdd />
+          <TweetAdd data={data}/>
           <hr />
           <div>
           {loading? data.slice(0,25).map((response)=>{
